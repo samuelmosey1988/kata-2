@@ -1,0 +1,48 @@
+<script>
+
+function add (a,b){
+    return a + b
+} 
+console.log(add(2, 4));
+
+
+function multiply(a,b) {
+    let count = 0;
+    for (let i = 0; i < a; i++) {
+        count = add(count, b)
+    }
+    return count; 
+} 
+console.log(multiply(6,8))
+
+
+function power(x, n) {
+    let count = 1;
+        for(let i = 0; i < n; i++){
+            count = multiply(x, count)
+        } 
+        return count;
+        }
+
+    console.log(power(3, 4))
+
+function factorial(x) {
+    var total = 1;
+    for (var i=1; i<=x; i++){
+        total = multiply(total,i);
+}
+return total;
+}
+console.log(factorial(4));
+
+function fibonacci(x){
+    var first = [0,1];
+
+    var total = 0;
+    for (var i = 2; i<=x; i++) {
+        first[i] = add(first[i-2], first[i-1])
+    }
+return first[x-1]; 
+}
+console.log (fibonacci(8)); 
+</script>
